@@ -4,7 +4,6 @@ Installation:
 
 Create symlinks:
 
-    mv ~/.vimrc ~/.vim/vimrc
     ln -s ~/.vim/vimrc ~/.vimrc
 
 
