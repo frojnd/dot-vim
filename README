@@ -1,6 +1,6 @@
 Installation:
 
-    git clone git://github.com/frojnd/dotvim.git ~/.vim
+    git clone git://github.com/frojnd/dot-vim.git ~/.vim
 
 Create symlinks:
 
