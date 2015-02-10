@@ -15,9 +15,17 @@ Plugin 'gmarik/Vundle.vim'
 " ##########################
 Plugin 'scrooloose/nerdtree'
 "Plugin 'tpope/vim-fugitive' " git managment
+" Rails
 Plugin 'tpope/vim-rails'
-Plugin 'topope/vim-bundler'
-Plugin 'tcomment_vim'
+Plugin 'tpope/vim-bundler'
+" Commenting and uncommenting stuff
+Plugin 'tomtom/tcomment_vim'
+" Autogenerate pairs for "{[( )
+Plugin 'jiangmiao/auto-pairs'
+" Tab completions
+Plugin 'ervandew/supertab'
+" omnicompletion for rails
+Plugin 'vim-ruby/vim-ruby'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -36,7 +44,19 @@ filetype plugin indent on    " required
 "
 syntax on
 colorscheme bubblegum
+autocmd VimEnter * NERDTree
 
+" omnicompletion for rails
+if has("autocmd")
+    autocmd FileType ruby set omnifunc=rubycomplete#Complete
+    autocmd FileType ruby let g:rubycomplete_buffer_loading=1
+    autocmd FileType ruby let g:rubycomplete_classes_in_global=1
+endif
+
+set smartindent
+set tabstop=2
+set sw=2
+set expandtab
 set t_Co=256
 set number
 set background=dark
