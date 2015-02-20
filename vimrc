@@ -26,6 +26,9 @@ Plugin 'jiangmiao/auto-pairs'
 Plugin 'ervandew/supertab'
 " omnicompletion for rails
 Plugin 'vim-ruby/vim-ruby'
+" gist vim
+Plugin 'mattn/gist-vim'
+Plugin 'mattn/webapi-vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
